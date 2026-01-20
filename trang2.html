@@ -2,46 +2,53 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <title>Menu</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hội chợ xuân – Menu món ăn</title>
+
   <style>
-  body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-
-    background-image: url("images/tet-bg-mobile.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    min-height: 100vh;
-  }
-
-  @media (max-width: 768px) {
     body {
-      background-position: top center;
-    }
-  }
-  </style>
+      margin: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
 
-}
+      background-image: url("images/tet-bg.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* mobile tối ưu ảnh */
+    @media (max-width: 768px) {
+      body {
+        background-position: top center;
+      }
+    }
+
+    .overlay {
+      background: rgba(255, 255, 255, 0.75);
+      min-height: 100vh;
+      padding: 30px 15px;
+      box-sizing: border-box;
+    }
+
     h1 {
       text-align: center;
-      padding: 30px 20px 10px;
+      margin-bottom: 30px;
     }
 
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
+      max-width: 1000px;
       margin: auto;
     }
 
     .card {
-      background: rgba(255,255,255,0.1);
+      background: white;
       border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
       transition: transform 0.3s;
     }
 
@@ -51,56 +58,74 @@
 
     .card img {
       width: 100%;
-      display: block;
+      height: 160px;
+      object-fit: cover;
     }
 
-    .desc {
-      padding: 15px;
-      font-size: 0.95rem;
-      opacity: 0.9;
+    .card .text {
+      padding: 12px;
+    }
+
+    .card h3 {
+      margin: 0 0 6px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 0.9rem;
+      opacity: 0.85;
     }
 
     .back {
       text-align: center;
-      margin: 30px;
+      margin-top: 30px;
     }
 
     .back a {
-      color: #ffd700;
       text-decoration: none;
-      font-size: 1.1rem;
+      color: #c62828;
+      font-weight: bold;
     }
   </style>
 </head>
+
 <body>
+  <div class="overlay">
+    <h1>📸 Menu các món ăn</h1>
 
-<h1>📷 Menu các món ăn</h1>
+    <div class="gallery">
+      <!-- Mỗi card = 1 ảnh -->
+      <div class="card">
+        <img src="images/1.jpg">
+        <div class="text">
+          <h3>Bánh chưng</h3>
+          <p>Hương vị Tết truyền thống, đậm đà quê hương.</p>
+        </div>
+      </div>
 
-<div class="gallery">
+      <div class="card">
+        <img src="images/2.jpg">
+        <div class="text">
+          <h3>Bánh tét</h3>
+          <p>Dẻo thơm, gói trọn không khí ngày xuân.</p>
+        </div>
+      </div>
 
-  <div class="card">
-    <img src="images/anh1.jpg">
-    <div class="desc">Khoảnh khắc đầu tiên của bộ ảnh.<br>Ghi lại một kỷ niệm rất đáng nhớ.</div>
+      <div class="card">
+        <img src="images/3.jpg">
+        <div class="text">
+          <h3>Chè xuân</h3>
+          <p>Ngọt ngào, mát lành cho ngày hội chợ.</p>
+        </div>
+      </div>
+
+      <!-- bạn copy thêm cho đủ 13 ảnh -->
+    </div>
+
+    <div class="back">
+      <a href="index.html">⬅ Quay về trang chủ</a>
+    </div>
   </div>
-
-  <div class="card">
-    <img src="images/anh2.jpg">
-    <div class="desc">Một góc nhìn quen mà lạ.<br>Càng nhìn càng thấy có hồn.</div>
-  </div>
-
-  <div class="card">
-    <img src="images/anh3.jpg">
-    <div class="desc">Ánh sáng và màu sắc hòa vào nhau.<br>Một cảm giác rất chill.</div>
-  </div>
-
-  <!-- CỨ LẶP TỚI 13 ẢNH -->
-  <!-- đổi anh4.jpg ... anh13.jpg và mô tả -->
-
-</div>
-
-<div class="back">
-  <a href="index.html">⬅ Quay về trang chủ</a>
-</div>
-
 </body>
 </html>
